@@ -1,6 +1,7 @@
 import './App.css';
 import Heading from './components/Heading.js';
 import Gameboard from './components/Gameboard.js';
+import React from 'react'
 import { useState } from 'react';
 
 function App() {

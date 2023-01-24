@@ -1,5 +1,6 @@
 import './Heading.css';
 import Timer from './Timer.js'
+import React from 'react'
 import Besttime from './Besttime.js';
 import Button from './Button.js';
 import Reset from './Reset.js';

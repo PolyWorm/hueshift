@@ -1,7 +1,16 @@
-.gameboard {
+.buttongrid {
     width: 500px;
     height: 500px;
     background-color: #7e7e7e;
     opacity: 50%;
     margin-top: 15px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.edges {
+    margin-top: 15px;
+    position: absolute;
+    opacity: 50%;
 }

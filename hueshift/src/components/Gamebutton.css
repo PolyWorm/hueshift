@@ -1,5 +1,14 @@
 .gamebutton {
+    position: block;
     background-color: aliceblue;
-
     z-index: 2;
+}
+.buttonrow {
+    display: flex;
+    justify-content: space-evenly;
+}
+.edges {
+    width: 500px;
+    height: 500px;
+    background-color: red;
 }
