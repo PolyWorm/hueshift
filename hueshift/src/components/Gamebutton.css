@@ -1,7 +1,7 @@
 .gamebutton {
     position: block;
-    background-color: white;
-    z-index: 2;
+    z-index: 4;
+
 }
 .buttonrow {
     display: flex;

@@ -4,7 +4,7 @@ import React from 'react'
 function Reset(props) {
   return (
     <div className="reset">
-        <h2 className="text2">reset</h2>
+        <h2 className="text2">scramble</h2>
     </div>
   );
 }

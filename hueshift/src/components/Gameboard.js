@@ -34,7 +34,7 @@ function Gameboard(props) {
                 <Nubs size={size}></Nubs>
             </div>
             <div className="buttongrid" style={sizing}>
-                <Gamebutton size={size}></Gamebutton>
+                <Gamebutton size={size} edges={edges} setedges={setedges}></Gamebutton>
             </div>
             <div className="edges">
                 <Edges size={size} edges={edges} setedges={setedges}></Edges>

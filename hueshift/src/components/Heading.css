@@ -1,6 +1,6 @@
 .heading {
     margin-top: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     width: 500px;
     height: 60px;
     display: flex;
@@ -28,5 +28,5 @@
 .controlbar {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
 }
