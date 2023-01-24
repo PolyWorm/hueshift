@@ -11,3 +11,8 @@
     width: 500px;
     height: 500px;
 }
+.nubs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [getSize, setSize] = useState(3);
+  const [getSize, setSize] = useState(4);
 
   return (
     <div className="body">

@@ -29,7 +29,7 @@ function Edges(props) {
             break
         }
         for (let j = count; j < (count + size + 1); j++){
-            tempedges.push(<Edge position={"vertical"} number={j} edges={edges} size={props.size}></Edge>)
+            tempedges.push(<Edge position={"vertical"} number={edges[j]} edges={edges} size={props.size}></Edge>)
         }
         verticaledges.push(<div className="verticalcolumn"> 
             {tempedges}

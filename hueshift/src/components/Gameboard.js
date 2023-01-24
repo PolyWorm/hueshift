@@ -2,6 +2,7 @@ import './Gameboard.css';
 import React from 'react'
 import Gamebutton from './Gamebutton.js';
 import Edges from './Edges';
+import Nubs from './Nubs.js';
 import { useState } from 'react';
 
 function Gameboard(props) {
@@ -29,6 +30,9 @@ function Gameboard(props) {
 
     return (
         <div className="gameboard">
+            <div className="nubs">
+                <Nubs size={size}></Nubs>
+            </div>
             <div className="buttongrid" style={sizing}>
                 <Gamebutton size={size}></Gamebutton>
             </div>
