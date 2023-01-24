@@ -1,6 +1,4 @@
-.Timer {
 
-}
 .timertext{
     text-align: center;
     margin: auto;
@@ -8,6 +6,7 @@
     font-weight: 200;
     color: #ffffff;
     letter-spacing: .1rem;
+    padding-bottom: 5px;
 }
 .time{
     text-align: center;
