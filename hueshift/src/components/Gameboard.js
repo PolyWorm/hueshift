@@ -6,6 +6,8 @@ import { useState } from 'react';
 
 function Gameboard(props) {
     const size = props.size
+    const edgeweight = (1/((props.size * 9) + 1)) * 500;
+    const marginofbutton = edgeweight / 2;
     const edgenumber = (size*(size+1) * 2)
     let buttons = []
     let edge = []
@@ -18,12 +20,16 @@ function Gameboard(props) {
         edge.push(i)
     }
     const [edges, setedges] = useState(edge)
+    let buttongridsize = 500 - edgeweight
+    let sizing = {width: buttongridsize,
+        height: buttongridsize,
+        "margin-top": marginofbutton+"px" }
 
 
 
     return (
         <div className="gameboard">
-            <div className="buttongrid">
+            <div className="buttongrid" style={sizing}>
                 <Gamebutton size={size}></Gamebutton>
             </div>
             <div className="edges">
