@@ -1,11 +1,13 @@
 import './Edges.css';
 import Edge from './Edge.js';
 import React from 'react'
+import {EdgeContext} from '../App.js'
+import {useContext} from 'react';
 
 function Edges(props) {
     //equation for finding the width of the edges.
-    let edges = props.edges
-    let edgecount = props.edges.length
+    const { edges, setEdges } = useContext(EdgeContext);
+    let edgecount = edges.length
     let size = props.size
     let count = size
     const width = (1/((props.size * 9) + 1)) * 500;
@@ -18,7 +20,7 @@ function Edges(props) {
         //horizontal
         let tempedges = []
         for (let j = i; j < count; j++){
-            tempedges.push(<Edge position={"horizontal"} number={edges[j]} edges={edges} size={props.size}></Edge>)
+            tempedges.push(<Edge position={"horizontal"} indexof={j}size={props.size}></Edge>)
         }
         horizontaledges.push(<div className="horizontalrow"> 
             {tempedges}
@@ -29,7 +31,7 @@ function Edges(props) {
             break
         }
         for (let j = count; j < (count + size + 1); j++){
-            tempedges.push(<Edge position={"vertical"} number={edges[j]} edges={edges} size={props.size}></Edge>)
+            tempedges.push(<Edge position={"vertical"} indexof={j} size={props.size}></Edge>)
         }
         verticaledges.push(<div className="verticalcolumn"> 
             {tempedges}
@@ -37,7 +39,6 @@ function Edges(props) {
         count += size + size + 1
     }
 
-    //vertical
     return (
         <div className="test">
             <div className="horizontal">{horizontaledges}</div>

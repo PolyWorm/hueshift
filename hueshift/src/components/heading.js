@@ -12,6 +12,7 @@ function Heading(props) {
     const [isPaused, setIsPaused] = useState(true)
     const [time, setTime] = useState(0.00)
     const setSize = props.setSize
+    const size = props.size
 
     return (
         <header>
@@ -27,7 +28,7 @@ function Heading(props) {
                 <Button setSize={setSize} size={3} edges={props.edges}></Button>
                 <Button setSize={setSize} size={4} edges={props.edges}></Button>
                 <Button setSize={setSize} size={5} edges={props.edges}></Button>
-                <Reset></Reset>
+                <Reset size={size}></Reset>
             </div>
         </header>
     );

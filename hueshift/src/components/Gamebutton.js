@@ -1,14 +1,16 @@
 import './Gamebutton.css';
 import EdgeController from './EdgeController.js';
 import React from 'react'
+import {EdgeContext} from '../App.js'
+import {useContext} from 'react'
+
 
 function Gamebutton(props) {
     //equation for finding the width of the button.
 
     
     const size = props.size
-    const edges = props.edges
-    const setEdges = props.setEdges
+    const { edges, setEdges } = useContext(EdgeContext);
     const length = (6/((props.size * 9) + 1)) * 500;
     //inner square size
     const innerlength = length * (2/3)
@@ -63,12 +65,12 @@ function Gamebutton(props) {
         for (let j = 0; j < size; j++) {
             let edgesOfCurrentButton = edgefinder(count)
             let corners = []
-            corners.push(<div className="inner" style={innersquare}></div>)
+            corners.push(<EdgeController size={size} number={count}styleguide={innersquare}></EdgeController>)
             for (let k = 0; k < edgesOfCurrentButton.length; k++) {
                 let col = colorpicker(edgesOfCurrentButton[k])
                 corners.push(rotater(k, col))
             }
-            buttonrow.push(<EdgeController className="gamebutton" style={styles}>{corners}</EdgeController>)
+            buttonrow.push(<div className="gamebutton" style={styles}>{corners}</div>)
             count += 1
         }
         buttons.push(
