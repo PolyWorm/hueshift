@@ -6,11 +6,12 @@ import Button from './Button.js';
 import Reset from './Reset.js';
 import { useState } from 'react';
 
-function Heading() {
+function Heading(props) {
 
-    const [isActive, setIsActive] = useState(false);
-    const [isPaused, setIsPaused] = useState(true);
-    const [time, setTime] = useState(0.00);
+    const [isActive, setIsActive] = useState(false)
+    const [isPaused, setIsPaused] = useState(true)
+    const [time, setTime] = useState(0.00)
+    const setSize = props.setSize
 
     return (
         <header>
@@ -23,9 +24,9 @@ function Heading() {
                 <Timer time={time}></Timer>
             </div>
             <div className="controlbar">
-                <Button size="3"></Button>
-                <Button size="4"></Button>
-                <Button size="5"></Button>
+                <Button setSize={setSize} size={3} edges={props.edges}></Button>
+                <Button setSize={setSize} size={4} edges={props.edges}></Button>
+                <Button setSize={setSize} size={5} edges={props.edges}></Button>
                 <Reset></Reset>
             </div>
         </header>
